@@ -17,8 +17,8 @@ const ProjectsSection = () => {
       title: "Bench Press Percentile Website",
       description: "A basic website that takes in age, weight, gender, and bench press and shows the user's percentile or strength level.",
       technologies: ["JavaScript", "HTML", "CSS", "Tailwind CSS"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://benchpresscalc.netlify.app",
+      githubUrl: "https://github.com/leoyang812/BenchPressPercentileCalculator",
       image: "https://images.pexels.com/photos/812746/pexels-photo-812746.jpeg"
     },
     {
@@ -26,7 +26,7 @@ const ProjectsSection = () => {
       description: "A platform that uses AI to analyze and improve students' weaknesses in mathematics. Still in development, this project aims to provide personalized learning experiences and adaptive practice for students.",
       technologies: ["React", "API Integration", "Responsive Design", "AI"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/EduApp101",
       image: "https://images.pexels.com/photos/18069230/pexels-photo-18069230.png"
     }
   ];
@@ -77,11 +77,19 @@ const ProjectsSection = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button className="flex-1">
+                  <Button 
+                    className="flex-1"
+                    style={project.title === "Math Education Website" ? { background: "#6b7280", cursor: "not-allowed" } : {}}
+                    onClick={() => project.title !== "Math Education Website" && window.open(project.liveUrl, '_blank', 'noopener,noreferrer')}
+                    disabled={project.title === "Math Education Website"}
+                  >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
                   </Button>
-                  <Button className="flex-1">
+                  <Button 
+                    className="flex-1"
+                    onClick={() => window.open(project.githubUrl, '_blank', 'noopener,noreferrer')}
+                  >
                     <Github className="w-4 h-4 mr-2" />
                     Code
                   </Button>
@@ -91,11 +99,7 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button>
-            View All Projects
-          </Button>
-        </div>
+        {/* Removed "View All Projects" button */}
       </div>
     </section>
   );
