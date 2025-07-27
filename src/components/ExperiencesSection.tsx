@@ -4,6 +4,7 @@ import { Calendar, MapPin } from "lucide-react";
 
 const ExperiencesSection = () => {
   const experiences = [
+    // EchoHorizon
     {
       title: "Founder",
       organization: "EchoHorizon",
@@ -14,36 +15,7 @@ const ExperiencesSection = () => {
       type: "Leadership",
       icon: "🎼"
     },
-    {
-      title: "Camp Assistant Volunteer",
-      organization: "Cosmo Music",
-      period: "2023 Aug 21-25",
-      location: "Richmond Hill, ON",
-      description: "Taught kids from ages 6-10 in three different instruments: Piano, drum, ukulele, and xylophone through demonstrations and music theory. Offered constructive feedback to support student learning.",
-      skills: ["Teaching", "Music Theory", "Child Development", "Communication"],
-      type: "Volunteer",
-      icon: "🎵"
-    },
-    {
-      title: "Coach (Volunteer for Little Rock)",
-      organization: "Unionville Curling Club",
-      period: "2022-2023 (Oct-Apr), 2023-2024 (Oct-Apr), 2024-2025 (Oct-Ongoing)",
-      location: "Markham, ON",
-      description: "Supervised the safety and conduct of kids from ages 5-11. Instructed kids on the principles of curling by demonstrating and giving positive suggestions for improvement. Encouraged active student engagement by delivering content through joy and high energy. Volunteered in multiple community events, and effectively communicated with people on the principles of the sport.",
-      skills: ["Coaching", "Safety Management", "Community Engagement", "Youth Development"],
-      type: "Volunteer",
-      icon: "🥌"
-    },
-    {
-      title: "Assistant Instructor Volunteer",
-      organization: "Dagmar Snow School",
-      period: "2022-2023 (Nov-Mar)",
-      location: "Uxbridge, ON",
-      description: "Assisted main instructors to teach kids how to snowboard. Encouraged student safety by actively demonstrating and showing of what to and not to do.",
-      skills: ["Snowboarding", "Safety Instruction", "Teaching Assistance", "Risk Management"],
-      type: "Volunteer",
-      icon: "🏂"
-    },
+    // Snowboard Instructor
     {
       title: "Snowboard Instructor",
       organization: "Dagmar Snow School",
@@ -54,15 +26,60 @@ const ExperiencesSection = () => {
       type: "Professional",
       icon: "⛷️"
     },
+    // Umpire
     {
-      title: "Umpire",
+      title: "Baseball Umpire",
       organization: "Richmond Hill Baseball",
       period: "2022 June - 2024 August",
-      location: "Location TBD",
+      location: "Richmond Hill, ON",
       description: "Responsible for the flow, rules, and integrity of the baseball game for kids 6-13. Resolved verbal and physical complications through compromise. Encouraged friendly and orderly behavior among everyone in the baseball game.",
       skills: ["Conflict Resolution", "Rule Enforcement", "Youth Management", "Sports Officiating"],
       type: "Professional",
       icon: "⚾"
+    },
+    // Coach
+    {
+      title: "Coach",
+      organization: "Dagmar Snow School",
+      period: "2022-2023 (Nov-Mar)",
+      location: "Uxbridge, ON",
+      description: "Assisted main instructors to teach kids how to snowboard. Encouraged student safety by actively demonstrating and showing of what to and not to do.",
+      skills: ["Snowboarding", "Safety Instruction", "Teaching Assistance", "Risk Management"],
+      type: "Volunteer",
+      icon: "🏂"
+    },
+    // CodeUp
+    {
+      title: "CodeUp Participant",
+      organization: "CodeUp Program",
+      period: "2023 Summer",
+      location: "Toronto, ON",
+      description: "Participated in an intensive coding bootcamp focused on full-stack web development, collaborating with peers on real-world projects.",
+      skills: ["Full-Stack Development", "Teamwork", "Project Management"],
+      type: "Education",
+      icon: "💻"
+    },
+    // Volunteer Coach (formerly Coach (Volunteer for Little Rock))
+    {
+      title: "Volunteer Coach",
+      organization: "Unionville Curling Club",
+      period: "2022-2023 (Oct-Apr), 2023-2024 (Oct-Apr), 2024-2025 (Oct-Ongoing)",
+      location: "Markham, ON",
+      description: "Supervised the safety and conduct of kids from ages 5-11. Instructed kids on the principles of curling by demonstrating and giving positive suggestions for improvement. Encouraged active student engagement by delivering content through joy and high energy. Volunteered in multiple community events, and effectively communicated with people on the principles of the sport.",
+      skills: ["Coaching", "Safety Management", "Community Engagement", "Youth Development"],
+      type: "Volunteer",
+      icon: "🥌"
+    },
+    // The rest (random order)
+    {
+      title: "Camp Assistant Volunteer",
+      organization: "Cosmo Music",
+      period: "2023 Aug 21-25",
+      location: "Richmond Hill, ON",
+      description: "Taught kids from ages 6-10 in three different instruments: Piano, drum, ukulele, and xylophone through demonstrations and music theory. Offered constructive feedback to support student learning.",
+      skills: ["Teaching", "Music Theory", "Child Development", "Communication"],
+      type: "Volunteer",
+      icon: "🎵"
     },
     {
       title: "Finance Director",
@@ -90,10 +107,10 @@ const ExperiencesSection = () => {
     <section id="experiences" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Beyond <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Code</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 mx-auto">
+            Beyond <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Code</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center">
             Experiences and activities that shape who I am outside of technical work
           </p>
         </div>
@@ -122,7 +139,11 @@ const ExperiencesSection = () => {
                           {experience.title}
                         </h3>
                         <p className="text-lg text-accent font-semibold">
-                          {experience.organization}
+                          {experience.organization === "EchoHorizon" ? (
+                            <a href="https://www.echohorizon.ca" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">{experience.organization}</a>
+                          ) : (
+                            experience.organization
+                          )}
                         </p>
                       </div>
                       

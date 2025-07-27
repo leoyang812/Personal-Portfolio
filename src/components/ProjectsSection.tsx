@@ -14,20 +14,20 @@ const ProjectsSection = () => {
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop"
     },
     {
-      title: "Todo Application",
-      description: "A clean and intuitive task management app with local storage, drag-and-drop functionality, and category organization.",
-      technologies: ["JavaScript", "HTML", "CSS", "Local Storage"],
+      title: "Bench Press Percentile Website",
+      description: "A basic website that takes in age, weight, gender, and bench press and shows the user's percentile or strength level.",
+      technologies: ["JavaScript", "HTML", "CSS", "Tailwind CSS"],
       liveUrl: "#",
       githubUrl: "#",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop"
+      image: "https://images.pexels.com/photos/812746/pexels-photo-812746.jpeg"
     },
     {
-      title: "Learning Project",
-      description: "A practice project exploring new technologies and implementing various features to solidify programming concepts.",
-      technologies: ["React", "API Integration", "Responsive Design"],
+      title: "Math Education Website",
+      description: "A platform that uses AI to analyze and improve students' weaknesses in mathematics. Still in development, this project aims to provide personalized learning experiences and adaptive practice for students.",
+      technologies: ["React", "API Integration", "Responsive Design", "AI"],
       liveUrl: "#",
       githubUrl: "#",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop"
+      image: "https://images.pexels.com/photos/18069230/pexels-photo-18069230.png"
     }
   ];
 
@@ -36,10 +36,10 @@ const ProjectsSection = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Projects</span>
+            Featured <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my recent work and personal projects
+            A showcase of my recent personal and collaborative projects
           </p>
         </div>
 
@@ -70,18 +70,18 @@ const ProjectsSection = () => {
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="outline" className="text-xs">
+                    <Badge key={tech} className="text-xs">
                       {tech}
                     </Badge>
                   ))}
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button variant="outline" size="sm" className="flex-1">
+                  <Button className="flex-1">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
                   </Button>
-                  <Button variant="outline" size="sm" className="flex-1">
+                  <Button className="flex-1">
                     <Github className="w-4 h-4 mr-2" />
                     Code
                   </Button>
@@ -92,7 +92,7 @@ const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="gradient" size="lg">
+          <Button>
             View All Projects
           </Button>
         </div>

@@ -36,10 +36,10 @@ const SkillsSection = () => {
           {skillCategories.map((category, index) => (
             <Card 
               key={category.title} 
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-blue-400 rounded-xl"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-12 text-center">
                 <div className="text-4xl mb-4 group-hover:animate-bounce">
                   {category.icon}
                 </div>
@@ -50,8 +50,7 @@ const SkillsSection = () => {
                   {category.skills.map((skill) => (
                     <Badge 
                       key={skill} 
-                    
-                      className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                      className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default border border-blue-400"
                     >
                       {skill}
                     </Badge>

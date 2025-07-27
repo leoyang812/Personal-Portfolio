@@ -1,16 +1,8 @@
 import React from "react";
 
-export const Badge = ({ children, ...props }: React.HTMLAttributes<HTMLSpanElement>) => (
+export const Badge = ({ children, className = "", ...props }: React.HTMLAttributes<HTMLSpanElement>) => (
   <span
-    style={{
-      display: "inline-block",
-      background: "#e0e7ff",
-      color: "#3730a3",
-      borderRadius: "999px",
-      padding: "4px 12px",
-      fontSize: "0.85rem",
-      fontWeight: 500,
-    }}
+    className={`inline-block bg-indigo-100 text-indigo-800 rounded-full px-4 py-1 text-sm font-medium ${className}`}
     {...props}
   >
     {children}
