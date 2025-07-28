@@ -64,7 +64,7 @@ const ProjectsSection = () => {
                   {project.title}
                 </h3>
                 
-                <p className="text-muted-foreground mb-4 line-clamp-3">
+                <p className="text-muted-foreground mb-4">
                   {project.description}
                 </p>
                 
