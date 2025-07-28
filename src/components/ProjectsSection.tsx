@@ -7,10 +7,10 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "Portfolio Website",
-      description: "A responsive personal portfolio built with React and modern web technologies. Features smooth animations, dark mode, and optimized performance.",
+      description: "A responsive personal portfolio built with React and modern web technologies. Features smooth animations and optimized performance.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://leoyangportfolio.vercel.app",
+      githubUrl: "https://github.com/leoyang812/Personal-Portfolio",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop"
     },
     {
@@ -23,7 +23,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Math Education Website",
-      description: "A platform that uses AI to analyze and improve students' weaknesses in mathematics. Still in development, this project aims to provide personalized learning experiences and adaptive practice for students.",
+      description: "A platform that uses AI to analyze and improve students' weaknesses in mathematics. Still in development, this app will aim to improve education, well-being, and provide personalized learning experiences through adaptive practice and AI-driven insights for students.",
       technologies: ["React", "API Integration", "Responsive Design", "AI"],
       liveUrl: "#",
       githubUrl: "https://github.com/EduApp101",
